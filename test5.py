@@ -32,11 +32,11 @@ def swap_memory():
 def get_users():
     res={}   
     users = ps.users()
-    for name, hz in users.items():
+    for name, value in users.items():
         res[name] = {
-            "name": hz.name,
-            "terminal": hz.terminal,
-            "started": hz.started
+            "name": value.name,
+            "terminal": value.terminal,
+            "started": value.started
             }
     return res
 
